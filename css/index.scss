@@ -1,0 +1,438 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.eot');
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+  url('iconfont.woff') format('woff'),
+  url('iconfont.ttf') format('truetype'),
+  url('iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin register_flex{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+}
+@mixin register_center{
+    justify-content:center;
+}
+@mixin register_lb{
+    justify-content:space-between;
+}
+@mixin register_db{
+    align-items: flex-end;
+}
+@mixin margin_auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+//------------------------------------------------piblic     buttom
+    .bottom_box{
+        background-color: white;        
+        .register_buttom{
+            width: 13rem;
+            @include register_flex;
+            @include register_lb;
+            @include margin_auto;
+            img{
+                height: 2rem;
+                margin-bottom: 0.3rem;
+                margin-top: 0.3rem;
+            }
+            span{
+                border-left: 1px solid #CCCCCC;
+                height: 1rem;
+                margin-top: 0.8rem;
+            }
+        } 
+    }
+
+//------------------------------------------------------enter        style
+
+.bigbox{
+    background: url(../images/bg.png) no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    padding-top: 3rem;
+    p{
+        font-size: 0.9rem;
+               @include register_flex;
+       @include register_center;
+       color: white;
+    }
+   .logo_box{
+       @include register_flex;
+       @include register_center;
+    }
+    .register_logo{
+        height: 6rem;
+        width: 7rem;
+    }
+    .register_input{
+        border-bottom: 2px solid #CCCCCC;
+        margin-top: 1rem;
+        width: 13rem;
+        @include margin_auto;
+        i{
+            font-size: 1.1rem;
+            color: white;
+        }
+        input{
+            border: 0;
+            background-color:transparent; 
+            border-color:transparent;
+            -webkit-appearance: none;
+            outline: none;
+            color: white;
+            height: 2.5rem;
+            width: 10rem;
+            font-size: 0.7rem;
+            margin-left: 1rem;
+        }
+    }
+    .btn{
+       @include register_flex;
+       @include register_center;
+       margin-top: 1.5rem;
+        button{
+            color: white;
+            font-size: 1rem;
+            width: 13rem;
+            height: 2.2rem;
+            background-color: #01A3E3;
+            border-radius: 10px;
+            border: 0;
+            outline: none;
+        }
+    }
+    .span_box{
+        @include margin_auto;
+        width: 13rem;
+        margin-top: 0.5rem;
+        margin-bottom: 4.5rem;
+        @include register_lb;
+        @include register_flex;
+        span{
+        color: white; 
+        }
+    }
+}
+
+
+
+//------------------------------------------------------register        style
+
+.zc_bigbox{
+    background: url(../images/bg.png) no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    p{
+       font-size: 0.9rem;
+       @include register_flex;
+       @include register_center;
+       color: #FFFFFF;
+       margin-top: 0;
+    }
+   .zc_logo_box{
+       @include register_flex;
+       @include register_center;
+    }
+    .zc_logo{
+        height: 7rem;
+        width: 7rem;
+    }
+    .zc_input{
+        border-bottom: 2px solid #CCCCCC;
+        margin-top: 1rem;
+        width: 13rem;
+        @include margin_auto;
+        i{
+            font-size: 1.1rem;
+            color: white;
+        }
+        input{
+            border: 0;
+            background-color:transparent; 
+            border-color:transparent;
+            -webkit-appearance: none;
+            outline: none;
+            color: white;
+            height: 2.5rem;
+            width: 9rem;
+            font-size: 0.7rem;
+            margin-left: 1rem;
+        }
+        button{
+            height: 1.5rem;
+            width: 4rem;
+            font-size: 0.6rem;
+            background-color: #464B69;
+            border-radius: 4px;
+            color: #FFFFFF;
+        }
+    }
+    .zc_btn{
+       @include register_flex;
+       @include register_center;
+       margin-top: 1rem;
+       margin-bottom: 2.6rem;
+        button{
+            color: white;
+            font-size: 1rem;
+            width: 13rem;
+            height: 2.2rem;
+            background-color: #01A3E3;
+            border-radius: 10px;
+            border: 0;
+            outline: none;
+        }
+    }
+}
+
+//------------------------------------------------------find        style
+
+.find_bigbox{
+    background: url(../images/bg.png) no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    p{
+       font-size: 0.9rem;
+       @include register_flex;
+       @include register_center;
+       color: #FFFFFF;
+       margin-top: 0;
+    }
+   .find_logo_box{
+       @include register_flex;
+       @include register_center;
+    }
+    .find_logo{
+        height: 7rem;
+        width: 7rem;
+    }
+    .find_input{
+        border-bottom: 2px solid #CCCCCC;
+        margin-top: 1rem;
+        width: 13rem;
+        @include margin_auto;
+        i{
+            font-size: 1.1rem;
+            color: white;
+        }
+        input{
+            border: 0;
+            background-color:transparent; 
+            border-color:transparent;
+            -webkit-appearance: none;
+            outline: none;
+            color: white;
+            height: 2.5rem;
+            width: 9rem;
+            font-size: 0.7rem;
+            margin-left: 1rem;
+        }
+        button{
+            height: 1.5rem;
+            width: 4rem;
+            font-size: 0.6rem;
+            background-color: #464B69;
+            border-radius: 4px;
+            color: #FFFFFF;
+        }
+    }
+    .find_btn{
+       @include register_flex;
+       @include register_center;
+       margin-top: 1rem;
+       margin-bottom: 2.6rem;
+        button{
+            color: white;
+            font-size: 1rem;
+            width: 13rem;
+            height: 2.2rem;
+            background-color: #01A3E3;
+            border-radius: 10px;
+            border: 0;
+            outline: none;
+        }
+    }
+}
+
+//------------------------------------------------------caller       style
+
+.caller_bigbox{
+    background: url(../images/bg.png) no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    position: relative;
+    p{
+       font-size: 0.9rem;
+       @include register_flex;
+       @include register_center;
+       color: #FFFFFF;
+       margin-top: 0;
+       margin-bottom: 5rem;
+       i{
+           font-size: 1rem;
+           color: #CCCCCC;
+           position: absolute;
+           right: 0.5rem;
+       }
+    }
+    .first_box{
+        @include register_flex;
+        justify-content: space-between;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-top: 1rem;
+        img{
+            height: 3.5rem;
+        }
+        p{
+            margin: 0;
+            font-size: 0.5rem;
+            color: #49A6F0;
+        }
+    } 
+}
+
+//------------------------------------------------------record       style
+
+.record_bigbox{
+    background: url(../images/bg.png) no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    position: relative;
+    height: 28rem;
+    p{
+       font-size: 0.9rem;
+       @include register_flex;
+       @include register_center;
+       color: #FFFFFF;
+       margin-top: 0;
+       .one{
+           font-size: 1rem;
+           color: #CCCCCC;
+           position: absolute;
+           right: 0.5rem;
+       }
+       .two{
+            font-size: 1rem;
+           color: #CCCCCC;
+           position: absolute;
+           left: 0.5rem;
+       }
+    }
+    .record_top{
+        height: 1rem;
+        background-color: #60646D;
+        border-top: 1px solid #F1F1F1;
+        border-bottom: 1px solid #F1F1F1;
+        p{
+            @include register_flex;
+            justify-content: flex-start;
+            padding-left: 1rem;
+            color: #F1F1F1;
+            font-size: 0.7rem;
+        }
+    }
+    .record_content{
+        @include register_flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #F1F1F1;
+        @include margin_auto;
+        width: 14rem;
+        padding-bottom: 1rem;
+        img{
+            height: 1.3rem;
+        }
+        p:first-child{
+            width: 2rem;
+            @include register_flex;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        p:last-child{
+            color: #5695E2;
+        }
+        p{
+            margin: 0;
+            font-size: 0.7rem;
+        }
+    }
+    .record_bottom_box{
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        .record_buttom{
+            width: 16rem;
+            @include register_flex;
+            @include register_lb;
+
+            img{
+                height: 2rem;
+                margin-bottom: 0.3rem;
+                margin-top: 0.3rem;
+            }
+            span{
+                border-left: 1px solid #CCCCCC;
+                height: 1rem;
+                margin-top: 0.8rem;
+            }
+            a:first-child{
+                margin-left: 1rem;
+            }
+            a:last-child{
+                margin-right: 1rem;
+            }
+        } 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
