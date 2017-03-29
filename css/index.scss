@@ -308,33 +308,36 @@ html,body{
     } 
 }
 
-//------------------------------------------------------record       style
+//------------------------------------------------------public   p    style
 
+.record_p{
+   font-size: 0.9rem;
+   @include register_flex;
+   @include register_center;
+   color: #FFFFFF;
+   margin-top: 0;
+   .one{
+       font-size: 1rem;
+       color: #CCCCCC;
+       position: absolute;
+       right: 0.5rem;
+   }
+   .two{
+        font-size: 1rem;
+       color: #CCCCCC;
+       position: absolute;
+       left: 0.5rem;
+   }
+}
+    
+ //------------------------------------------------------record       style   
 .record_bigbox{
     background: url(../images/bg.png) no-repeat;
     background-size: cover;
     min-height: 100%;
     position: relative;
-    height: 28rem;
-    p{
-       font-size: 0.9rem;
-       @include register_flex;
-       @include register_center;
-       color: #FFFFFF;
-       margin-top: 0;
-       .one{
-           font-size: 1rem;
-           color: #CCCCCC;
-           position: absolute;
-           right: 0.5rem;
-       }
-       .two{
-            font-size: 1rem;
-           color: #CCCCCC;
-           position: absolute;
-           left: 0.5rem;
-       }
-    }
+    height: 29rem;
+    
     .record_top{
         height: 1rem;
         background-color: #60646D;
@@ -346,37 +349,42 @@ html,body{
             padding-left: 1rem;
             color: #F1F1F1;
             font-size: 0.7rem;
+            margin-bottom: 0;
         }
     }
-    .record_content{
-        @include register_flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #F1F1F1;
-        @include margin_auto;
-        width: 14rem;
-        padding-bottom: 1rem;
-        img{
-            height: 1.3rem;
-        }
-        p:first-child{
-            width: 2rem;
-            @include register_flex;
-            flex-wrap: wrap;
-            text-align: center;
-        }
-        p:last-child{
-            color: #5695E2;
-        }
-        p{
-            margin: 0;
-            font-size: 0.7rem;
-        }
-    }
+//  .record_content{
+//      padding-bottom: 1rem;
+//      padding-left: 0;
+//      margin-left: 1rem;
+//      margin-right: 1rem;
+//      img{
+//          height: 1.3rem;
+//      }
+//      .content_li{
+//          display: flex; 
+//          display: -webkit-flex; 
+//          align-items: center;
+//          justify-content: space-between;
+//      }
+//      p:first-child{
+//          width: 2rem;
+//          @include register_flex;
+//          flex-wrap: wrap;
+//          text-align: center;
+//      }
+//      p:last-child{
+//          color: #5695E2;
+//      }
+//      p{
+//          margin: 0;
+//          font-size: 0.7rem;
+//      }
+ //   }
     .record_bottom_box{
         background-color: white;
         position: fixed;
         bottom: 0;
+        z-index: 99;
         .record_buttom{
             width: 16rem;
             @include register_flex;
@@ -402,20 +410,141 @@ html,body{
     }
 }
 
+//------------------------------------------------------permit       style
+.permit_bigbox{
+    background: url(../images/bg.png) no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    p{
+        @extend .record_p; // public  p  style
+    }
+    .permit_box_one{
+        background-color: #575C60;
+        color: #F1F1F1;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        .permit_boxone{
+             @include register_flex;
+            justify-content: flex-start;
+            div{
+                margin-left: 1rem;
+            }
+            p{
+                margin: 0;
+                @include register_flex;
+                justify-content: flex-start;
+            }
+        }
+        img{
+            height: 1.5rem;
+        }
+        p{
+            font-size: 0.7rem;
+        }
+        table{
+            @include register_flex;
+            @include register_center;
+            margin-top: 1rem;
+        }
+        .permit_center_td{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    
+    }
+    .permit_box_two{
+        @extend .permit_box_one;
+        padding-bottom: 0;
+        margin-top: 0.3rem;
+        span{
+            width: 5.5rem;
+        }
+        .permit_box_double{
+            background: url(../images/permit.png) no-repeat 100% 100%;
+            background-size: 23%;
+            padding-bottom: 0.5rem;
+            p{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .permit_deta{
+        @include register_flex;
+        @include register_center;
+        margin-top: 0.5rem;
+        p{
+            font-size: 0.7rem;
+        }
+    }
+    .permit_rwmimg{
+        @include register_flex;
+        @include register_center;
+        img{
+            height: 10rem;
+        } 
+    }
+    .permit_bottom_a{
+        color: #F1F1F1;
+        @include register_flex;
+        @include register_center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+}
 
+//------------------------------------------------------caller_details       style
+.caller_details_top{
+    color: #F1F1F1;
+    @include register_flex;
+    align-items: center;   
+    padding-left: 0.9rem;
+    margin-top: 1rem;
+    img{
+        height: 1.3rem;
+    }
+    span{
+        margin-left: 1rem;        
+    }
+}
+.caller_details_content{
+    margin-left: 1.5rem;
+    border-left: 1px solid #565C71;
+    padding-left: 0.7rem;
+    margin-right: 0.3rem;
+    td{
+        @include register_flex;
+        @include register_center;
+        align-items: center;
+        color: #F1F1F1;
+        input{
+            margin-bottom: 0;
+            background-color: rgba(255,255,255,0.3);
+            border: 1px solid #F1F1F1;
+            height: 1.3rem;
+            margin-top: 0.2rem;
+        }
+        span{
+            width: 3rem;
+            font-size: 0.7rem;
 
-
-
-
-
-
-
-
-
-
-
-
-
+        }
+    }
+    table{
+        border-bottom: 2px solid #565C71;
+    }
+}
+.caller_details_btn{
+    width: 100%;
+    color: #F1F1F1;
+    background-color: #01A3E3;
+    font-size: 0.8rem;
+    height: 2.5rem;
+    margin: 1.5rem 0;
+    border: 0;
+}
+#demo1,#demo2{
+    padding: 0;
+}
 
 
 

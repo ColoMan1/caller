@@ -7,59 +7,69 @@
 		<title>记录</title>
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
 		<link rel="stylesheet" type="text/css" href="../font/iconfont.css"/>
+		<link rel="stylesheet" href="../css/mui.min.css">
+		
 	</head>
 	<body style="font-size: 62.5%;">
 		<div class="record_bigbox">
-			<p>
-				<a href="">
+			<p class="record_p">
+				<a href="#">
 					<i class="iconfont one">&#xe64c;</i>
-				</a>汉脑访客系统
-				<a href="">
+				</a>
+				<span>汉脑访客系统</span>
+				<a href="#">
 					<i class="iconfont two">&#xe61d;</i>
 				</a>
 			</p>
 			<div class="record_top">
 				<p>3月</p>
 			</div>
-			<div class="record_content" style="margin-top: 0.7rem;">
-				<p><span>周五</span><br /><span>03-24</span></p>
-				<img src="../images/访.png"/>
-				<p>龙士达</p>
-				<p>方大</p>
-				<p>授权通过</p>
-			</div>
-			<div class="record_content" style="margin-top: 0.7rem;">
-				<p><span>周五</span><br /><span>03-24</span></p>
-				<img src="../images/送.png"/>
-				<p>龙士达</p>
-				<p>方大</p>
-				<p>授权通过</p>
-			</div>
-			<div class="record_content" style="margin-top: 0.7rem;">
-				<p><span>周五</span><br /><span>03-24</span></p>
-				<img src="../images/送.png"/>
-				<p>龙士达</p>
-				<p>方大</p>
-				<p>授权通过</p>
-			</div>
-			<div class="record_content" style="margin-top: 0.7rem;">
-				<p><span>周五</span><br /><span>03-24</span></p>
-				<img src="../images/提.png"/>
-				<p>龙士达</p>
-				<p>方大</p>
-				<p>授权通过</p>
-			</div>
+<!--			<ul class="record_content" style="margin-top: 0.7rem;">
+				<li class="content_li">
+					<p><span>周五</span><br /><span>03-24</span></p>
+					<img src="../images/访.png"/>
+					<p>龙士达</p>
+					<p>方大</p>
+					<p>授权通过</p>
+				</li>
+			</ul>-->
 			<div class="record_bottom_box">
 				<div class="record_buttom">
-					<a href=""><img src="../images/浙江汉脑.png"/></a>
+					<a href="#"><img src="../images/浙江汉脑.png"/></a>
 					<span></span>
-					<a href=""><img src="../images/鉴真宝.png"/></a>
+					<a href="#"><img src="../images/鉴真宝.png"/></a>
 				</div>
 			</div>
 		</div>
+		<script src="../js/mui.min.js"></script>
 		<script src="../js/demo.js"></script>
 		<script src="../js/jquery-3.2.0.slim.min.js"></script>
 		<script src="../js/index.js"></script>
+
+		<script type="text/javascript">
+		//启用双击监听
+		mui.init({
+			gestureConfig:{
+				doubletap:true
+			},
+			subpages:[{
+				url:'iframe.html',
+				id:'iframe.html',
+				styles:{
+					top: '57px',
+					bottom: '59px',
+				}
+			}]
+		});
+	
+		var contentWebview = null;
+		document.querySelector('header').addEventListener('doubletap',function () {
+			if(contentWebview==null){
+				contentWebview = plus.webview.currentWebview().children()[0];
+			}
+			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
+		});
+	</script>
 	</body>
 </html>
 
