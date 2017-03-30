@@ -1,7 +1,11 @@
 html,body{
     margin: 0;
     padding: 0;
+    font-family:Helvetica;
 }
+
+
+
 
 @font-face {
   font-family: 'iconfont';
@@ -36,11 +40,14 @@ html,body{
     margin-left: auto;
     margin-right: auto;
 }
-
+@mixin box_padding{
+    padding-top: 0.5rem;
+}
 
 //------------------------------------------------piblic     buttom
     .bottom_box{
-        background-color: white;        
+        background-color: white;
+        @include box_padding;      
         .register_buttom{
             width: 13rem;
             @include register_flex;
@@ -62,13 +69,14 @@ html,body{
 //------------------------------------------------------enter        style
 
 .bigbox{
+    
     background: url(../images/bg.png) no-repeat;
     background-size: cover;
     min-height: 100%;
     padding-top: 3rem;
     p{
-        font-size: 0.9rem;
-               @include register_flex;
+       font-size: 0.9rem;
+       @include register_flex;
        @include register_center;
        color: white;
     }
@@ -128,6 +136,11 @@ html,body{
         color: white; 
         }
     }
+    .index_yzsj,.index_yzmm{
+        margin: 0;
+        font-size: 0.7rem;
+        color: red;
+    }
 }
 
 
@@ -135,6 +148,7 @@ html,body{
 //------------------------------------------------------register        style
 
 .zc_bigbox{
+            @include box_padding; 
     background: url(../images/bg.png) no-repeat;
     background-size: cover;
     min-height: 100%;
@@ -204,6 +218,7 @@ html,body{
 //------------------------------------------------------find        style
 
 .find_bigbox{
+            @include box_padding; 
     background: url(../images/bg.png) no-repeat;
     background-size: cover;
     min-height: 100%;
@@ -273,6 +288,7 @@ html,body{
 //------------------------------------------------------caller       style
 
 .caller_bigbox{
+            @include box_padding; 
     background: url(../images/bg.png) no-repeat;
     background-size: cover;
     min-height: 100%;
@@ -337,7 +353,6 @@ html,body{
     min-height: 100%;
     position: relative;
     height: 29rem;
-    
     .record_top{
         height: 1rem;
         background-color: #60646D;
@@ -415,6 +430,7 @@ html,body{
     background: url(../images/bg.png) no-repeat;
     background-size: cover;
     min-height: 100%;
+            @include box_padding; 
     p{
         @extend .record_p; // public  p  style
     }
@@ -532,6 +548,7 @@ html,body{
     table{
         border-bottom: 2px solid #565C71;
     }
+    
 }
 .caller_details_btn{
     width: 100%;
@@ -547,13 +564,59 @@ html,body{
 }
 
 
+//------------------------------------------------------locale_register       style
+.locale_register_box{
+            @include box_padding; 
+    .locale_register_btn{
+        margin: 0.8rem 0;
+    }
+    select{
+        background-color: rgba(255,255,255,0.3);
+        margin: 0;
+        line-height: 10px;
+        height: 1.3rem;        
+    }
+    #selectStyle{
+        border: 1px solid #F1F1F1;
+        border-radius: 3px;
+
+        overflow: hidden;
+        width: 11rem;
+        position: relative;
+        margin-top: 0.2rem;
+        i{
+            position: absolute;
+            top: 3px;
+            right: 5px;
+        }
+        #select option{
+            color:#222;
+        }
+        #select option:hover{
+            color:#fff;
+        }
+        #select option:checked{
+            background:#535353;
+            color:#fff; 
+        }
+    }
+    #demo1{
+        margin-left: 2.4rem;
+    }   
+}
 
 
-
-
-
-
-
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation : portrait) {
+    .bigbox .span_box{
+        margin-bottom: 2rem;
+    }
+    .bigbox .register_input{
+        margin-top: 0.5rem;
+    }
+    .bigbox{
+        padding-top: 2rem;
+    }
+}
 
 
 
