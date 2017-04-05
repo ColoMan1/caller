@@ -4,7 +4,9 @@ html,body{
     font-family:Helvetica;
 }
 
-
+a{
+    text-decoration:none;
+}
 
 
 @font-face {
@@ -44,36 +46,14 @@ html,body{
     padding-top: 0.5rem;
 }
 
-//------------------------------------------------piblic     buttom
-    .bottom_box{
-        background-color: white;
-        @include box_padding;      
-        .register_buttom{
-            width: 13rem;
-            @include register_flex;
-            @include register_lb;
-            @include margin_auto;
-            img{
-                height: 2rem;
-                margin-bottom: 0.3rem;
-                margin-top: 0.3rem;
-            }
-            span{
-                border-left: 1px solid #CCCCCC;
-                height: 1rem;
-                margin-top: 0.8rem;
-            }
-        } 
-    }
 
 //------------------------------------------------------enter        style
 
 .bigbox{
-    
     background: url(../images/bg.png) no-repeat;
     background-size: cover;
     min-height: 100%;
-    padding-top: 3rem;
+    padding-top: 1rem;
     p{
        font-size: 0.9rem;
        @include register_flex;
@@ -90,7 +70,7 @@ html,body{
     }
     .register_input{
         border-bottom: 2px solid #CCCCCC;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         width: 13rem;
         @include margin_auto;
         i{
@@ -120,7 +100,7 @@ html,body{
             width: 13rem;
             height: 2.2rem;
             background-color: #01A3E3;
-            border-radius: 10px;
+            border-radius: 5px;
             border: 0;
             outline: none;
         }
@@ -129,18 +109,15 @@ html,body{
         @include margin_auto;
         width: 13rem;
         margin-top: 0.5rem;
-        margin-bottom: 4.5rem;
+        margin-bottom: 1.7rem;
         @include register_lb;
         @include register_flex;
         span{
-        color: white; 
+        color: white;
+        font-size: 0.7rem;
         }
     }
-    .index_yzsj,.index_yzmm{
-        margin: 0;
-        font-size: 0.7rem;
-        color: red;
-    }
+    
 }
 
 
@@ -184,31 +161,33 @@ html,body{
             outline: none;
             color: white;
             height: 2.5rem;
-            width: 9rem;
+            width: 64%;
             font-size: 0.7rem;
             margin-left: 1rem;
         }
         button{
             height: 1.5rem;
-            width: 4rem;
+            width: 30%;
             font-size: 0.6rem;
             background-color: #464B69;
             border-radius: 4px;
             color: #FFFFFF;
+            border: 0;
+            padding: 0;
         }
     }
-    .zc_btn{
+    .zc_btn_box{
        @include register_flex;
        @include register_center;
-       margin-top: 1rem;
-       margin-bottom: 2.6rem;
+       margin-top: 1.5rem;
+       margin-bottom: 2.5rem;
         button{
             color: white;
             font-size: 1rem;
             width: 13rem;
             height: 2.2rem;
             background-color: #01A3E3;
-            border-radius: 10px;
+            border-radius: 5px;
             border: 0;
             outline: none;
         }
@@ -239,7 +218,7 @@ html,body{
     }
     .find_input{
         border-bottom: 2px solid #CCCCCC;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         width: 13rem;
         @include margin_auto;
         i{
@@ -254,33 +233,35 @@ html,body{
             outline: none;
             color: white;
             height: 2.5rem;
-            width: 9rem;
+            width: 7.5rem;
             font-size: 0.7rem;
             margin-left: 1rem;
         }
         button{
             height: 1.5rem;
-            width: 4rem;
+            width: 4.5rem;
             font-size: 0.6rem;
             background-color: #464B69;
             border-radius: 4px;
             color: #FFFFFF;
+            border: 0;
         }
     }
-    .find_btn{
+    .find_btn_box{
        @include register_flex;
        @include register_center;
-       margin-top: 1rem;
-       margin-bottom: 2.6rem;
+       margin-top: 0.5rem;
+       margin-bottom: 2rem;
         button{
             color: white;
             font-size: 1rem;
             width: 13rem;
             height: 2.2rem;
             background-color: #01A3E3;
-            border-radius: 10px;
+            border-radius: 5px;
             border: 0;
             outline: none;
+            font-size: 0.8rem;
         }
     }
 }
@@ -299,7 +280,7 @@ html,body{
        @include register_center;
        color: #FFFFFF;
        margin-top: 0;
-       margin-bottom: 5rem;
+       margin-bottom: 2rem;
        i{
            font-size: 1rem;
            color: #CCCCCC;
@@ -332,6 +313,9 @@ html,body{
    @include register_center;
    color: #FFFFFF;
    margin-top: 0;
+   a{
+       padding-top: 0.2rem;
+   }
    .one{
        font-size: 1rem;
        color: #CCCCCC;
@@ -367,34 +351,7 @@ html,body{
             margin-bottom: 0;
         }
     }
-//  .record_content{
-//      padding-bottom: 1rem;
-//      padding-left: 0;
-//      margin-left: 1rem;
-//      margin-right: 1rem;
-//      img{
-//          height: 1.3rem;
-//      }
-//      .content_li{
-//          display: flex; 
-//          display: -webkit-flex; 
-//          align-items: center;
-//          justify-content: space-between;
-//      }
-//      p:first-child{
-//          width: 2rem;
-//          @include register_flex;
-//          flex-wrap: wrap;
-//          text-align: center;
-//      }
-//      p:last-child{
-//          color: #5695E2;
-//      }
-//      p{
-//          margin: 0;
-//          font-size: 0.7rem;
-//      }
- //   }
+
     .record_bottom_box{
         background-color: white;
         position: fixed;
@@ -496,15 +453,16 @@ html,body{
         @include register_flex;
         @include register_center;
         img{
-            height: 10rem;
+            height: 8rem;
+            width: 11rem;
         } 
     }
     .permit_bottom_a{
         color: #F1F1F1;
         @include register_flex;
         @include register_center;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -573,8 +531,8 @@ html,body{
     select{
         background-color: rgba(255,255,255,0.3);
         margin: 0;
-        line-height: 10px;
-        height: 1.3rem;        
+        line-height: 13px;
+        height: 1.6rem;
     }
     #selectStyle{
         border: 1px solid #F1F1F1;
@@ -602,29 +560,132 @@ html,body{
     }
     #demo1{
         margin-left: 2.4rem;
-    }   
+    }
+
+}
+@media screen and (device-width: 375px){
+        .locale_register_box{
+            @include box_padding;
+        .locale_register_btn{
+            margin: 0.8rem 0;
+        }
+        select{
+            background-color: rgba(255,255,255,0.3);
+            margin: 0;
+            line-height: 13px;
+            height: 1.6rem;
+        }
+        #selectStyle{
+            border: 1px solid #F1F1F1;
+            border-radius: 3px;
+    
+            overflow: hidden;
+            width: 11rem;
+            position: relative;
+            margin-top: 0.2rem;
+            i{
+                position: absolute;
+                top: 3px;
+                right: 5px;
+            }
+            #select option{
+                color:#222;
+            }
+            #select option:hover{
+                color:#fff;
+            }
+            #select option:checked{
+                background:#535353;
+                color:#fff; 
+            }
+        }
+        #demo1{
+            margin-left: 2.4rem;
+        }
+        #demo2{
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+//@media screen and (min-device-width: 320px){
+@media screen and (device-aspect-ratio: 40/71) {
+    .locale_register_box{
+            @include box_padding;
+        .locale_register_btn{
+            margin: 0.8rem 0;
+        }
+        select{
+            background-color: rgba(255,255,255,0.3);
+            margin: 0;
+            line-height: 13px;
+            height: 1.6rem;
+        }
+        #selectStyle{
+            border: 1px solid #F1F1F1;
+            border-radius: 3px;
+    
+            overflow: hidden;
+            width: 11rem;
+            position: relative;
+            margin-top: 0.2rem;
+            i{
+                position: absolute;
+                top: 7px;
+                right: 5px;
+            }
+            #select option{
+                color:#222;
+            }
+            #select option:hover{
+                color:#fff;
+            }
+            #select option:checked{
+                background:#535353;
+                color:#fff; 
+            }
+        }
+        #demo1{
+            margin-left: 2.4rem;
+        }
+        #demo2{
+            margin-left: 0;
+        }
+    }
 }
 
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation : portrait) {
-    .bigbox .span_box{
-        margin-bottom: 2rem;
+
+
+
+
+
+
+
+
+//------------------------------------------------piblic     buttom
+    .bottom_box{
+        background-color: white;
+        .register_buttom{
+            width: 13rem;
+            @include register_flex;
+            @include register_lb;
+            @include margin_auto;
+            img{
+                height: 1.5rem;
+                margin-bottom: 0.2rem;
+                margin-top: 0.2rem;
+            }
+            span{
+                border-left: 1px solid #CCCCCC;
+                height: 1rem;
+                margin-top: 0.5rem;
+            }
+        } 
     }
-    .bigbox .register_input{
-        margin-top: 0.5rem;
+
+#public_yzsj,#public_yzmm{
+        margin: 0;
+        font-size: 0.7rem;
+        color: red;
     }
-    .bigbox{
-        padding-top: 2rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-

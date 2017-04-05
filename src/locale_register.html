@@ -102,19 +102,17 @@
 		var now = new Date();
 		demo2.value=new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate();
 		$("#select").change(function(){
-			var $date = $("#select option:selected").text()
-			var $$date = new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + (new Date().getDate());
+			var $date = $("#select option:selected").text();
+			var $$date = new Date().getFullYear() + '/' + (new Date().getMonth() + 1) + '/' + (new Date().getDate());
 			function getNewDay(dateTemp, days) {
 			    var dateTemp = dateTemp.split("-");
-			    var nDate = new Date(dateTemp[1] + '-' + dateTemp[2] + '-' + dateTemp[0]); //转换为MM-DD-YYYY格式    
+			    var nDate = new Date(dateTemp[1] + '/' + dateTemp[2] + '/' + dateTemp[0]); //转换为MM-DD-YYYY格式    
 			    var millSeconds = Math.abs(nDate) + (days * 24 * 60 * 60 * 1000);
 			    var rDate = new Date(millSeconds);
 			    var year = rDate.getFullYear();
-			    var month = rDate.getMonth() + 1;  
-			    if (month < 10) month = "0" + month;  
-			    var date = rDate.getDate();  
-			    if (date < 10) date = "0" + date;  
-			    return (year + "-" + month + "-" + date);  
+			    var month = rDate.getMonth() + 1;
+			    var date = rDate.getDate();
+			    return (year + "-" + month + "-" + date);
 			};
 			$('#demo2').val(getNewDay($$date,$date));
 		});

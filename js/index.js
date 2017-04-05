@@ -32,5 +32,3 @@ $('.first_box img').on('touchend',function(){
 
 
 
-
-
